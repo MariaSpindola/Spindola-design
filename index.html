@@ -28,7 +28,7 @@
       --cinza-claro: #f5f5f5;
       --cinza-medio: #666;
       --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
-      --sombra-grande: 0 10px 25px rgba(0, 0, 0, 0.1);
+      --sombra-grande: 0 10px 25px rgba(0, 0, _SIMPLE_TEXT_0, 0.1);
       --transicao: all 0.3s ease;
       --borda-arredondada: 12px;
     }
@@ -106,7 +106,7 @@
     }
     
     .bg-light {
-      background-color: rgba(245, 245, 245, 0.5);
+      background-color: var(--cinza-claro);
     }
     
     /* Animações */
@@ -175,9 +175,8 @@
       background-color: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(15px);
       padding: 15px 0;
-      box-shadow: 0 4px 20px rgba(79, 25, 176, 0.08);
-      z-index: 1000;
       border-bottom: 1px solid rgba(79, 25, 176, 0.1);
+      z-index: 1000;
       transition: all 0.4s ease;
     }
     
@@ -274,7 +273,6 @@
       height: 320px;
       border-radius: 50%;
       border: 4px solid var(--branco);
-      box-shadow: var(--sombra-grande);
       overflow: hidden;
       animation: float 4s ease-in-out infinite;
     }
@@ -302,13 +300,11 @@
       transition: var(--transicao);
       border: none;
       cursor: pointer;
-      box-shadow: var(--sombra);
     }
     
     .btn:hover {
       background-color: var(--roxo-claro);
       transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 6px 15px rgba(79, 25, 176, 0.2);
     }
     
     .btn-container {
@@ -342,24 +338,11 @@
     
     /* Timeline */
     .timeline-item {
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(5px);
-      box-shadow: var(--sombra);
-      padding: 30px 30px 30px 60px;
-      border-radius: var(--borda-arredondada);
       margin-bottom: 40px;
-      position: relative;
-      border: 1px solid rgba(0, 0, 0, 0.05);
       text-align: left;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
-      transition: var(--transicao);
-    }
-    
-    .timeline-item:hover {
-      transform: translateX(16px);
-      box-shadow: var(--sombra-grande);
     }
     
     .timeline-title {
@@ -421,11 +404,12 @@
       max-width: 340px;
       min-height: 360px;
       margin: 0 auto;
-      transition: box-shadow 0.3s ease;
+      transition: var(--transicao);
     }
     
     .project-card:hover {
       box-shadow: var(--sombra-grande);
+      transform: translateY(-10px);
     }
     
     .project-img-container {
@@ -520,19 +504,7 @@
     }
     
     .skill-card {
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(5px);
-      padding: 30px;
-      border-radius: var(--borda-arredondada);
-      box-shadow: var(--sombra);
       text-align: center;
-      transition: var(--transicao);
-      border: 1px solid rgba(0, 0, 0, 0.05);
-    }
-    
-    .skill-card:hover {
-      transform: translateY(-16px) scale(1.03);
-      box-shadow: var(--sombra-grande);
     }
     
     .skill-icon {
@@ -560,6 +532,13 @@
       box-shadow: var(--sombra);
       max-width: 600px;
       margin: 0 auto;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      transition: var(--transicao);
+    }
+    
+    .contact-form-container:hover {
+      box-shadow: var(--sombra-grande);
+      transform: translateY(-10px);
     }
     
     .form-group {
@@ -590,7 +569,6 @@
     .form-textarea:focus {
       outline: none;
       border-color: var(--roxo-escuro);
-      box-shadow: 0 0 0 2px rgba(79, 25, 176, 0.2);
     }
     
     .form-textarea {
@@ -619,9 +597,7 @@
     /* Footer */
     .footer {
       padding: 30px 0;
-      background-color: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(5px);
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      background-color: var(--cinza-claro);
     }
     
     .footer-text {
@@ -645,7 +621,6 @@
       cursor: pointer;
       opacity: 0;
       visibility: hidden;
-      box-shadow: var(--sombra);
       transition: var(--transicao);
       border: none;
       z-index: 100;
@@ -753,14 +728,6 @@
         height: 250px;
       }
       
-      .timeline-item {
-        padding: 20px 20px 20px 50px;
-      }
-      
-      .contact-form-container {
-        padding: 20px;
-      }
-      
       .project-img-container {
         height: 140px;
       }
@@ -771,6 +738,10 @@
       
       .btn-container {
         max-width: 100%;
+      }
+      
+      .contact-form-container {
+        padding: 20px;
       }
     }
   </style>
@@ -812,26 +783,26 @@
   <!-- Conteúdo principal -->
   <main id="main">
     <!-- Seção Hero -->
-         <section class="hero">
-        <div class="container hero-container">
-          <div class="hero-content">
-            <h1 class="hero-title" data-aos="fade-up">Maria Spíndola</h1>
-            <p class="hero-text" data-aos="fade-up" data-aos-delay="100">
-              Designer apaixonada por criar experiências visuais que conectam pessoas e marcas. 
-              Combinando criatividade, estratégia e tecnologia para desenvolver soluções impactantes e memoráveis.
-            </p>
-            <div class="btn-container">
-              <a href="#contato" class="btn" style="width: 160px;">Entre em contato</a>
-            </div>
-          </div>
-          
-          <div class="hero-img-container" data-aos="fade-left">
-            <div class="hero-img">
-              <img src="Maria.JPG" alt="Maria Spíndola">
-            </div>
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title" data-aos="fade-up">Maria Spíndola</h1>
+          <p class="hero-text" data-aos="fade-up" data-aos-delay="100">
+            Designer apaixonada por criar experiências visuais que conectam pessoas e marcas. 
+            Combinando criatividade, estratégia e tecnologia para desenvolver soluções impactantes e memoráveis.
+          </p>
+          <div class="btn-container">
+            <a href="#contato" class="btn" style="width: 150px;">Entre em contato</a>
           </div>
         </div>
-      </section>
+        
+        <div class="hero-img-container" data-aos="fade-left">
+          <div class="hero-img">
+            <img src="Maria.JPG" alt="Maria Spíndola">
+          </div>
+        </div>
+      </div>
+    </section>
     
     <!-- Seção Formação -->
     <section id="formacao">
@@ -921,6 +892,8 @@
               <a href="artes.html" class="project-link">Ver detalhes <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
+        </div>
+      </div>
     </section>
     
     <!-- Seção Ferramentas -->
