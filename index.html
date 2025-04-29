@@ -100,11 +100,6 @@
       padding: 100px 0;
     }
     
-    /* Offset para seções devido à navbar fixa */
-    section[id] {
-      scroll-margin-top: 100px;
-    }
-    
     /* Utilidades */
     .text-center {
       text-align: center;
@@ -308,8 +303,6 @@
       border: none;
       cursor: pointer;
       box-shadow: var(--sombra);
-      text-align: center;
-      text-decoration: none;
     }
     
     .btn:hover {
@@ -827,9 +820,10 @@
             Designer apaixonada por criar experiências visuais que conectam pessoas e marcas. 
             Combinando criatividade, estratégia e tecnologia para desenvolver soluções impactantes e memoráveis.
           </p>
-         <div class="btn-container">
-        <a href="#contato" class="btn" style="width: 30%;">Entre em contato</a>
-    </div>
+          <div class="btn-container">
+            <button type="submit" class="btn" style="width: 30%;">Entre em contato</button>
+          </div>
+        </div>
         
         <div class="hero-img-container" data-aos="fade-left">
           <div class="hero-img">
@@ -927,8 +921,6 @@
               <a href="artes.html" class="project-link">Ver detalhes <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
-        </div>
-      </div>
     </section>
     
     <!-- Seção Ferramentas -->
@@ -1124,21 +1116,6 @@
     }
     
     window.addEventListener('scroll', activateNavLink);
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
     
     // Submit form
     document.getElementById('contact-form').addEventListener('submit', function(e) {
