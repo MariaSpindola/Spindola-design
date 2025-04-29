@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Case Sankhya: Material de marketing para Sankhya Gestão de Negócios, destacando soluções de ERP, projetado por Maria Spíndola.">
+  <meta name="keywords" content="design, marketing, Sankhya, ERP, Maria Spíndola">
+  <title>Case Sankhya | Maria Spíndola</title>
+  
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Lora e Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- AOS (Animate On Scroll) para animações -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  
+  <style>
+    /* Variáveis CSS */
+    :root {
+      --roxo-escuro: #4f19b0;
+      --roxo-claro: #8951f2;
+      --roxo-vivo: #9061f9;
+      --grafite: #333;
+      --branco: #fff;
+      --bege-claro: #f9f9f9;
+      --cinza-claro: #f5f5f5;
+      --cinza-medio: #666;
+      --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --sombra-grande: 0 10px 25px rgba(0, 0, 0, 0.1);
+      --transicao: all 0.5s ease;
+      --borda-arredondada: 12px;
+    }
+    
+    /* Reset e estilo base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--grafite);
+      line-height: 1.7;
+      background-color: var(--branco);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    section {
+      padding: 100px 0;
+    }
+    
+    /* Utilidades */
+    .text-center {
+      text-align: center;
+    }
+    
+    .bg-light {
+      background-color: var(--cinza-claro);
+    }
+    
+    /* Animações */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    /* Estilo do background com gradiente */
+    .bg-accents::before,
+    .bg-accents::after {
+      content: '';
+      position: fixed;
+      width: 80vw;
+      height: 80vw;
+      border-radius: 50%;
+      z-index: -1;
+      opacity: 0.1;
+    }
+    
+    .bg-accents::before {
+      top: -40vw;
+      left: -40vw;
+      background: radial-gradient(circle, var(--roxo-claro), transparent 70%);
+    }
+    
+    .bg-accents::after {
+      bottom: -40vw;
+      right: -40vw;
+      background: radial-gradient(circle, var(--roxo-escuro), transparent 70%);
+    }
+    
+    /* Skip link para acessibilidade */
+    .skip-link {
+      position: absolute;
+      top: -50px;
+      left: 20px;
+      background-color: var(--roxo-escuro);
+      color: var(--branco);
+      padding: 8px 16px;
+      border-radius: 4px;
+      z-index: 9999;
+      transition: var(--transicao);
+    }
+    
+    .skip-link:focus {
+      top: 20px;
+    }
+    
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(15px);
+      padding: 15px 0;
+      box-shadow: 0 4px 20px rgba(79, 25, 176, 0.08);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(79, 25, 176, 0.1);
+      transition: all 0.4s ease;
+    }
+    
+    .navbar:hover {
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+    
+    .navbar-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo-link img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      transition: transform 0.6s ease;
+    }
+    
+    .logo-link:hover img {
+      transform: scale(1.1);
+    }
+    
+    .nav-menu {
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-item {
+      margin: 0 15px;
+    }
+    
+    .nav-link {
+      font-size: 14px;
+      padding: 5px 10px;
+      border-radius: 10px;
+      transition: var(--transicao);
+    }
+    
+    .nav-link:hover {
+      color: var(--roxo-escuro);
+      font-weight: bold;
+    }
+    
+    .nav-link.active {
+      font-weight: bold;
+      color: var(--roxo-escuro);
+    }
+    
+    /* Seções de projeto */
+    .project-header {
+      padding: 100px 0;
+      text-align: center;
+    }
+    
+    .project-title {
+      font-size: 36px;
+      margin-bottom: 15px;
+      background: linear-gradient(to right, var(--roxo-escuro), var(--roxo-claro));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .project-subtitle {
+      font-size: 18px;
+      color: var(--cinza-medio);
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+    
+    .project-featured-img {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: var(--borda-arredondada);
+      overflow: hidden;
+      box-shadow: var(--sombra-grande);
+    }
+    
+    .project-featured-img img,
+    .project-featured-img video {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.7s ease;
+    }
+    
+    .project-featured-img:hover img,
+    .project-featured-img:hover video {
+      transform: scale(1.03);
+    }
+    
+    /* Conteúdo do projeto */
+    .project-content {
+      padding: 100px 0;
+    }
+    
+    .project-section {
+      margin-bottom: 60px;
+    }
+    
+    .project-section-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: var(--grafite);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .project-section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      height: 3px;
+      width: 60px;
+      background-color: var(--roxo-escuro);
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+    
+    .project-section-title:hover::after {
+      width: 100%;
+    }
+    
+    .project-text {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: var(--grafite);
+    }
+    
+    /* Layout flexível */
+    .flex-container {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin: 40px 0;
+    }
+    
+    .flex-text {
+      flex: 1;
+    }
+    
+    .flex-image {
+      flex: 1;
+      border-radius: var(--borda-arredondada);
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      transition: var(--transicao);
+    }
+    
+    .flex-image:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--sombra-grande);
+    }
+    
+    .flex-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.7s ease;
+    }
+    
+    .flex-image:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Botão de voltar */
+    .back-btn {
+      display: inline-block;
+      background-color: var(--roxo-escuro);
+      color: var(--branco);
+      padding: 12px 24px;
+      border-radius: var(--borda-arredondada);
+      margin-top: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: var(--transicao);
+      box-shadow: var(--sombra);
+      text-align: center;
+    }
+    
+    .back-btn:hover {
+      background-color: var(--roxo-claro);
+      transform: translateY(-5px);
+      box-shadow: var(--sombra-grande);
+    }
+    
+    .back-btn i {
+      margin-right: 8px;
+    }
+    
+    /* Botão voltar ao topo */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--roxo-escuro);
+      color: var(--branco);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: var(--sombra);
+      transition: var(--transicao);
+      border: none;
+      z-index: 100;
+    }
+    
+    .back-to-top.visible {
+      opacity: 0.7;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+    
+    /* Media Queries */
+    @media (max-width: 991px) {
+      .flex-container {
+        flex-direction: column;
+      }
+      
+      .flex-text, 
+      .flex-image {
+        width: 100%;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .navbar-container {
+        flex-direction: column;
+      }
+      
+      .logo-link {
+        margin-bottom: 15px;
+      }
+      
+      .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .nav-item {
+        margin: 5px;
+      }
+      
+      .project-title {
+        font-size: 28px;
+      }
+      
+      .project-subtitle {
+        font-size: 16px;
+      }
+      
+      .project-section-title {
+        font-size: 24px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      section {
+        padding: 60px 0;
+      }
+      
+      .project-header {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+<body class="bg-accents">
+  <!-- Link de acessibilidade -->
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="Index4.html" class="logo-link">
+        <img src="img/logo.png" alt="Logo de Maria Spíndola">
+      </a>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item">
+          <a href="Index4.html#formacao" class="nav-link">Formação</a>
+        </li>
+        <li class="nav-item">
+          <a href="Index4.html#experiencia" class="nav-link">Experiência</a>
+        </li>
+        <li class="nav-item">
+          <a href="Index4.html#projetos" class="nav-link active">Projetos</a>
+        </li>
+        <li class="nav-item">
+          <a href="Index4.html#ferramentas" class="nav-link">Ferramentas</a>
+        </li>
+        <li class="nav-item">
+          <a href="Index4.html.#soft-skills" class="nav-link">Soft Skills</a>
+        </li>
+        <li class="nav-item">
+          <a href="Index4.html#contato" class="nav-link">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Conteúdo principal -->
+  <main id="main">
+    <!-- Cabeçalho do Projeto -->
+    <section class="project-header">
+      <div class="container">
+        <h1 class="project-title" data-aos="fade-up">Sankhya: Materiais de Design</h1>
+        <p class="project-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Um projeto de design de marketing para a Sankhya Gestão de Negócios, com foco na criação de materiais visuais impactantes que destacam as soluções de ERP da empresa, promovendo engajamento e conversão.
+        </p>
+        
+        <div class="project-featured-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="img/flyer sankhya.jpg" alt="Flyer de marketing para Sankhya">
+        </div>
+      </div>
+    </section>
+    
+    <!-- Conteúdo do Projeto -->
+    <section class="project-content">
+      <div class="container">
+        <div class="flex-container">
+          <div class="flex-text" data-aos="fade-right">
+            <h2 class="project-section-title">O Desafio</h2>
+            <p class="project-text">
+              A Sankhya precisava de materiais de marketing que comunicassem de forma clara e atraente as vantagens de suas soluções de ERP, destacando-se em um mercado competitivo e engajando potenciais clientes.
+            </p>
+            
+            <h2 class="project-section-title">A Solução</h2>
+            <p class="project-text">
+              Desenvolvi uma série de peças visuais, incluindo flyers e posts para redes sociais, com design moderno, tipografia impactante e cores que refletem a identidade da marca, garantindo consistência e apelo visual.
+            </p>
+          </div>
+          
+          <div class="flex-image" data-aos="fade-left">
+            <img src="img/Chipus (feed).png" alt="Post para redes sociais da Sankhya">
+          </div>
+        </div>
+        
+        <div class="project-section" data-aos="fade-up">
+          <h2 class="project-section-title">O Processo</h2>
+          <p class="project-text">
+            Realizei uma análise da identidade visual da Sankhya e do público-alvo, criei moodboards e protótipos no Figma, e ajustei os designs com base no feedback da equipe de marketing para garantir alinhamento com os objetivos da campanha.
+          </p>
+          
+          <div class="flex-image" data-aos="fade-up" data-aos-delay="100" style="max-width: 500px; margin: 30px auto;">
+            <img src="img/Case Sankhya.jpg" alt="Material de marketing para Sankhya Gestão de Negócios">
+          </div>
+        </div>
+        
+        <div class="project-section" data-aos="fade-up">
+          <h2 class="project-section-title">Resultados</h2>
+          <p class="project-text">
+            Os materiais entregues aumentaram o engajamento nas redes sociais em 30% e geraram um aumento significativo no interesse pelas soluções de ERP da Sankhya, com feedback positivo dos clientes e da equipe interna.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <a href="Index4.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Ver Outros Projetos
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="footer-text">© <span id="current-year">2025</span> Maria Spíndola. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  
+  <!-- Botão voltar ao topo -->
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  
+  <!-- Script AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Inicialização AOS
+    AOS.init({
+      duration: 800,
+      once: false,
+      mirror: true,
+      offset: 100
+    });
+    
+    // Atualizar ano no footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Botão voltar ao topo
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+</body>
+</html>
