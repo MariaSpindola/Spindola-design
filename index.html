@@ -310,7 +310,6 @@
       box-shadow: var(--sombra);
       text-align: center;
       text-decoration: none;
-      z-index: 10;
     }
     
     .btn:hover {
@@ -321,11 +320,11 @@
     
     .btn-container {
       max-width: 600px;
-      position: relative;
     }
     
     .btn-container .btn {
       display: block;
+      width: 100%;
     }
     
     /* Seções */
@@ -828,10 +827,345 @@
             Designer apaixonada por criar experiências visuais que conectam pessoas e marcas. 
             Combinando criatividade, estratégia e tecnologia para desenvolver soluções impactantes e memoráveis.
           </p>
-          <div class="btn-container">
-            <a href="#contato" class="btn" style="width: 30%;">Entre em contato</a>
-          </div>
-        </div>
+         <div class="btn-container">
+        <a href="#contato" class="btn" style="width: 30%;">Entre em contato</a>
+    </div>
         
         <div class="hero-img-container" data-aos="fade-left">
-          <div class="hero-img 
+          <div class="hero-img">
+            <img src="Maria.JPG" alt="Maria Spíndola">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção Formação -->
+    <section id="formacao">
+      <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">Formação Acadêmica</h2>
+        
+        <div class="timeline" data-aos="fade-up">
+          <div class="timeline-item" data-aos="fade-up">
+            <h3 class="timeline-title">Administração de Empresas</h3>
+            <div class="timeline-subtitle">Universidade Estácio de Sá | 2017 - 2024</div>
+          </div>
+          
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="timeline-title">Design Gráfico</h3>
+            <div class="timeline-subtitle">Uninter | Conclusão em 2025</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção Experiência -->
+    <section id="experiencia" class="bg-light">
+      <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">Experiência</h2>
+        
+        <div class="timeline" data-aos="fade-up">
+          <div class="timeline-item" data-aos="fade-up">
+            <h3 class="timeline-title">Analista de Sucesso do Cliente</h3>
+            <div class="timeline-subtitle">Sankhya Gestão de Negócios | Nov 2020 - Presente</div>
+            <div class="timeline-desc">
+              <ul class="timeline-list">
+                <li>Otimizei processos de atendimento ao cliente, elevando o NPS acumulado de 9 para 54, com foco em pesquisas de satisfação e análise de fluxos.</li>
+                <li>Criei documentação de processos, padronizando fluxos operacionais para facilitar treinamento de equipes e onboarding de clientes.</li>
+                <li>Desenvolvi materiais de apresentação, aprimorando a comunicação visual e o engajamento em reuniões estratégicas.</li>
+                <li>Mapeei causas raiz de chamados, propondo soluções que reduziram o tempo de resolução em colaboração com equipes de suporte.</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="timeline-title">Analista de Marketing</h3>
+            <div class="timeline-subtitle">Sankhya Gestão de Negócios | Mar 2024 - Presente</div>
+            <div class="timeline-desc">
+              <ul class="timeline-list">
+                <li>Apoiei o desenvolvimento de artes para workshops e convites, criando materiais visuais impactantes para engajar participantes.</li>
+                <li>Planejei e executei eventos, compilando resultados para avaliação de desempenho e melhoria contínua.</li>
+                <li>Criei automações de e-mail marketing, otimizando a comunicação com clientes via fluxos personalizados.</li>
+                <li>Desenvolvi fluxos de processos no Active Campaign, estruturando campanhas e melhorando a eficiência operacional.</li>
+                <li>Organizei visitas estratégicas de empresas do grupo Sankhya, coordenando logística e fortalecendo relacionamentos.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção Projetos -->
+    <section id="projetos">
+      <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">Projetos</h2>
+        
+        <div class="projects-grid">
+          <div class="project-card" data-aos="fade-up">
+            <a href="projetoong.html" class="project-img-container">
+              <img class="project-img" src="1.png" alt="App para adoção">
+            </a>
+            <div class="project-content">
+              <h3 class="project-title">UX/UI Design</h3>
+              <h4 class="project-subtitle">App de adoção</h4>
+              <p class="project-desc">
+                Aplicativo estilo Tinder para adoção de cães e gatos, projetado para agilizar e humanizar o processo de adoção.
+              </p>
+              <a href="projetoong.html" class="project-link">Ver detalhes <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <a href="artes.html" class="project-img-container">
+              <img class="project-img" src="Chipus (feed).png" alt="Materiais visuais Sankhya">
+            </a>
+            <div class="project-content">
+              <h3 class="project-title">Design Gráfico</h3>
+              <h4 class="project-subtitle">Materiais visuais Sankhya</h4>
+              <p class="project-desc">
+                Criação de materiais de marketing impactantes para a Sankhya Gestão de Negócios, destacando soluções de ERP.
+              </p>
+              <a href="artes.html" class="project-link">Ver detalhes <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção Ferramentas -->
+    <section id="ferramentas" class="bg-light">
+      <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">Ferramentas</h2>
+        
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="fade-up">
+            <i class="fab fa-figma skill-icon"></i>
+            <h3 class="skill-title">Figma</h3>
+          </div>
+          
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-pen-nib skill-icon"></i>
+            <h3 class="skill-title">Illustrator</h3>
+          </div>
+          
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+            <i class="fas fa-image skill-icon"></i>
+            <h3 class="skill-title">Photoshop</h3>
+          </div>
+          
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-film skill-icon"></i>
+            <h3 class="skill-title">After Effects</h3>
+          </div>
+          
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+            <i class="fas fa-code skill-icon"></i>
+            <h3 class="skill-title">HTML/CSS</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção Soft Skills -->
+    <section id="soft-skills">
+      <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">Soft Skills</h2>
+        
+        <div class="skills-grid">
+          <div class="skill-card" data-aos="fade-up">
+            <i class="fas fa-comments skill-icon"></i>
+            <h3 class="skill-title">Comunicação</h3>
+          </div>
+          
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="50">
+            <i class="fas fa-users skill-icon"></i>
+            <h3 class="skill-title">Trabalho em Equipe</h3>
+          </div>
+          
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-lightbulb skill-icon"></i>
+            <h3 class="skill-title">Criatividade</h3>
+          </div>
+          
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="150">
+            <i class="fas fa-tasks skill-icon"></i>
+            <h3 class="skill-title">Organização</h3>
+          </div>
+          
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-clock skill-icon"></i>
+            <h3 class="skill-title">Gestão de Tempo</h3>
+          </div>
+          
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="250">
+            <i class="fas fa-sync-alt skill-icon"></i>
+            <h3 class="skill-title">Adaptabilidade</h3>
+          </div>
+          
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-brain skill-icon"></i>
+            <h3 class="skill-title">Pensamento Crítico</h3>
+          </div>
+          
+          <div class="skill-card" data-aos="fade-up" data-aos-delay="350">
+            <i class="fas fa-chart-line skill-icon"></i>
+            <h3 class="skill-title">Liderança</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Seção Contato -->
+    <section id="contato" class="bg-light">
+      <div class="container text-center">
+        <h2 class="section-title" data-aos="fade-up">Contato</h2>
+        
+        <div class="contact-form-container" data-aos="fade-up">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name" class="form-label">Nome</label>
+              <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Mensagem</label>
+              <textarea id="message" name="message" class="form-textarea" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn" style="width: 100%;">Enviar mensagem</button>
+          </form>
+          
+          <div class="social-links">
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://behance.net/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fab fa-behance"></i>
+            </a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="footer-text">© <span id="current-year">2025</span> Maria Spíndola. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  
+  <!-- Botão voltar ao topo -->
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  
+  <!-- Script AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <!-- Scripts -->
+  <script>
+    // Inicialização AOS
+    AOS.init({
+      duration: 800,
+      once: false,
+      mirror: true,
+      offset: 100
+    });
+    
+    // Atualizar ano no footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Botão voltar ao topo
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Navegação ativa
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    function activateNavLink() {
+      const scrollY = window.scrollY;
+      
+      sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${sectionId}`) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', activateNavLink);
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Submit form
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      if (!name || !email || !message) {
+        alert('Por favor, preencha todos os campos obrigatórios.');
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Por favor, forneça um endereço de email válido.');
+        return;
+      }
+      
+      // Simulação de envio
+      alert('Mensagem enviada! Obrigado pelo seu contato. Retornarei em breve.');
+      
+      // Reset form
+      this.reset();
+    });
+  </script>
+</body>
+</html>
