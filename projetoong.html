@@ -332,11 +332,15 @@
       background-color: var(--grafite);
       color: var(--branco);
       border: none;
-      padding: 10px;
+      width: 40px; /* Dimensões fixas para formato circular */
+      height: 40px;
       cursor: pointer;
       border-radius: 50%;
       font-size: 14px;
       opacity: 0.8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: background-color 0.3s ease, opacity 0.3s ease; /* Transição apenas para cor e opacidade */
     }
     
@@ -351,7 +355,7 @@
     }
     
     .carousel-nav .next-btn {
-      margin-right: 50px; /* Move o botão direito para a esquerda */
+      margin-right: 100px; /* Aumenta a margem para aproximar do centro */
     }
     
     .carousel-dots {
@@ -503,16 +507,17 @@
       }
       
       .carousel-nav button {
-        padding: 9px;
+        width: 36px; /* Menor em telas menores */
+        height: 36px;
         font-size: 13px;
       }
       
       .carousel-nav .prev-btn {
-        margin-left: 30px; /* Reduz a margem em telas menores */
+        margin-left: 30px; /* Reduz a margem */
       }
       
       .carousel-nav .next-btn {
-        margin-right: 30px; /* Reduz a margem em telas menores */
+        margin-right: 60px; /* Aumenta a margem para aproximar */
       }
       
       .carousel-dot {
@@ -560,16 +565,17 @@
       }
       
       .carousel-nav button {
-        padding: 8px;
+        width: 32px; /* Ainda menor em telas pequenas */
+        height: 32px;
         font-size: 12px;
       }
       
       .carousel-nav .prev-btn {
-        margin-left: 15px; /* Ainda menos margem em telas pequenas */
+        margin-left: 15px; /* Reduz a margem */
       }
       
       .carousel-nav .next-btn {
-        margin-right: 15px; /* Ainda menos margem em telas pequenas */
+        margin-right: 30px; /* Aumenta a margem para aproximar */
       }
       
       .carousel-dot {
