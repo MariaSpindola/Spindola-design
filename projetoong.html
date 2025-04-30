@@ -619,8 +619,8 @@
             </div>
           </div>
           <div class="carousel-nav">
-            <button onclick="prevSlide()" class="prev-btn" aria-label="Imagem anterior"><i class="fas fa-arrow-left"></i></button>
-            <button onclick="nextSlide()" class="next-btn" aria-label="Próxima imagem"><i class="fas fa-arrow-right"></i></button>
+            <button onclick="nextSlide()" class="prev-btn" aria-label="Próxima imagem"><i class="fas fa-arrow-left"></i></button>
+            <button onclick="prevSlide()" class="next-btn" aria-label="Imagem anterior"><i class="fas fa-arrow-right"></i></button>
           </div>
           <div class="carousel-dots">
             <span class="carousel-dot active" onclick="goToSlide(0)"></span>
@@ -774,11 +774,11 @@
       const nextBtn = document.querySelector('.next-btn');
       prevBtn.addEventListener('click', () => {
         console.log('Evento click em Anterior');
-        prevSlide();
+        nextSlide();
       });
       nextBtn.addEventListener('click', () => {
         console.log('Evento click em Próximo');
-        nextSlide();
+        prevSlide();
       });
     });
   </script>
