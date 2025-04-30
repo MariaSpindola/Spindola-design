@@ -7,19 +7,13 @@
   <meta name="keywords" content="design, UX, UI, aplicativo, adoção, DIBEA, Florianópolis, Maria Spíndola">
   <title>App para DIBEA Florianópolis | Maria Spíndola</title>
   
-  <!-- Font Awesome para ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Fonts: Lora e Roboto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  
-  <!-- AOS (Animate On Scroll) para animações -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   
   <style>
-    /* Variáveis CSS */
     :root {
       --roxo-escuro: #4f19b0;
       --roxo-claro: #8951f2;
@@ -35,7 +29,6 @@
       --borda-arredondada: 12px;
     }
     
-    /* Reset e estilo base */
     * {
       margin: 0;
       padding: 0;
@@ -85,7 +78,6 @@
       padding: 100px 0;
     }
     
-    /* Utilidades */
     .text-center {
       text-align: center;
     }
@@ -94,13 +86,11 @@
       background-color: var(--cinza-claro);
     }
     
-    /* Animações */
     @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-15px); }
     }
     
-    /* Estilo do background com gradiente */
     .bg-accents::before,
     .bg-accents::after {
       content: '';
@@ -124,7 +114,6 @@
       background: radial-gradient(circle, var(--roxo-escuro), transparent 70%);
     }
     
-    /* Skip link para acessibilidade */
     .skip-link {
       position: absolute;
       top: -50px;
@@ -141,7 +130,6 @@
       top: 20px;
     }
     
-    /* Navbar */
     .navbar {
       position: fixed;
       top: 0;
@@ -202,7 +190,6 @@
       transform: scale(1.1);
     }
     
-    /* Seções de projeto */
     .project-header {
       padding: 60px 0 20px 0;
       text-align: center;
@@ -225,7 +212,6 @@
       line-height: 1.5;
     }
     
-    /* Conteúdo do projeto */
     .project-content {
       padding: 20px 0 100px 0;
     }
@@ -265,7 +251,6 @@
       color: var(--grafite);
     }
     
-    /* Carrossel */
     .carousel-container {
       position: relative;
       max-width: 900px;
@@ -299,8 +284,8 @@
     }
     
     .carousel-item.next {
-      opacity: 0.5; /* Transparência para prévia ao fundo */
-      transform: translateX(30%) scale(0.8) perspective(500px) rotateY(-10deg); /* Ajustado para aproximar */
+      opacity: 0.5;
+      transform: translateX(30%) scale(0.8) perspective(500px) rotateY(-10deg);
       z-index: 1;
     }
     
@@ -326,6 +311,7 @@
       justify-content: space-between;
       transform: translateY(-50%);
       padding: 0 15px;
+      z-index: 10; /* Aumentado para garantir cliques */
     }
     
     .carousel-nav button {
@@ -384,7 +370,6 @@
       background-color: var(--roxo-claro);
     }
     
-    /* Botão de voltar */
     .back-btn {
       display: inline-block;
       background-color: var(--roxo-escuro);
@@ -409,7 +394,6 @@
       margin-right: 8px;
     }
     
-    /* Botão voltar ao topo */
     .back-to-top {
       position: fixed;
       bottom: 30px;
@@ -441,7 +425,6 @@
       transform: translateY(-5px);
     }
     
-    /* Media Queries */
     @media (max-width: 991px) {
       .carousel-container {
         max-width: 800px;
@@ -451,7 +434,7 @@
         width: 55%;
       }
       .carousel-item.next {
-        transform: translateX(30%) scale(0.8) perspective(500px) rotateY(-10deg); /* Ajustado para aproximar */
+        transform: translateX(30%) scale(0.8) perspective(500px) rotateY(-10deg);
       }
       .carousel-item.prev {
         transform: translateX(-90%) scale(0.8) perspective(500px) rotateY(10deg);
@@ -497,7 +480,7 @@
         width: 60%;
       }
       .carousel-item.next {
-        transform: translateX(25%) scale(0.8) perspective(500px) rotateY(-10deg); /* Ajustado para telas menores */
+        transform: translateX(25%) scale(0.8) perspective(500px) rotateY(-10deg);
       }
       
       .carousel-item.prev {
@@ -547,7 +530,7 @@
       }
       
       .carousel-item.next {
-        transform: translateX(20%) scale(0.8) perspective(500px) rotateY(-10deg); /* Ajustado para telas pequenas */
+        transform: translateX(20%) scale(0.8) perspective(500px) rotateY(-10deg);
       }
       
       .carousel-item.prev {
@@ -585,10 +568,8 @@
   </style>
 </head>
 <body class="bg-accents">
-  <!-- Link de acessibilidade -->
   <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
   
-  <!-- Navbar -->
   <nav class="navbar">
     <div class="container navbar-container">
       <a href="index.html" class="logo-link">
@@ -618,9 +599,7 @@
     </div>
   </nav>
   
-  <!-- Conteúdo principal -->
   <main id="main">
-    <!-- Cabeçalho do Projeto -->
     <section class="project-header">
       <div class="container">
         <h1 class="project-title" data-aos="fade-up">App para DIBEA: Um Match para a Vida</h1>
@@ -630,10 +609,8 @@
       </div>
     </section>
     
-    <!-- Conteúdo do Projeto -->
     <section class="project-content">
       <div class="container">
-        <!-- Carrossel com 2.png, 1.png e 3.png -->
         <div class="carousel-container" data-aos="zoom-out">
           <div class="carousel" id="carousel">
             <div class="carousel-item active">
@@ -657,7 +634,6 @@
           </div>
         </div>
         
-        <!-- Seção O Desafio e A Ideia -->
         <div class="project-section" data-aos="fade-up">
           <h2 class="project-section-title">O Desafio</h2>
           <p class="project-text">
@@ -693,22 +669,18 @@
     </section>
   </main>
   
-  <!-- Footer -->
   <footer class="footer">
     <div class="container text-center">
       <p class="footer-text">© <span id="current-year">2025</span> Maria Spíndola. Todos os direitos reservados.</p>
     </div>
   </footer>
   
-  <!-- Botão voltar ao topo -->
   <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
     <i class="fas fa-chevron-up"></i>
   </button>
   
-  <!-- Script AOS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    // Inicialização AOS
     AOS.init({
       duration: 800,
       once: false,
@@ -716,10 +688,8 @@
       offset: 100
     });
     
-    // Atualizar ano no footer
     document.getElementById('current-year').textContent = new Date().getFullYear();
     
-    // Botão voltar ao topo
     const backToTopButton = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
@@ -736,30 +706,25 @@
       });
     });
     
-    // Carrossel
     const carousel = document.getElementById('carousel');
     const slides = carousel.getElementsByClassName('carousel-item');
     const dots = document.getElementsByClassName('carousel-dot');
     let currentSlide = 0;
     
     function showSlide(index) {
-      // Normalizar índice
       index = (index + slides.length) % slides.length;
       currentSlide = index;
       
-      // Resetar todos os slides
       for (let i = 0; i < slides.length; i++) {
         slides[i].classList.remove('active', 'next', 'prev');
         slides[i].style.opacity = '0';
         slides[i].style.zIndex = '0';
       }
       
-      // Configurar slide ativo
       slides[currentSlide].classList.add('active');
       slides[currentSlide].style.opacity = '1';
       slides[currentSlide].style.zIndex = '2';
       
-      // Configurar próximo e anterior
       const nextIndex = (currentSlide + 1) % slides.length;
       const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
       slides[nextIndex].classList.add('next');
@@ -769,7 +734,6 @@
       slides[prevIndex].style.opacity = '0.5';
       slides[prevIndex].style.zIndex = '1';
       
-      // Atualizar dots
       for (let i = 0; i < dots.length; i++) {
         dots[i].classList.remove('active');
       }
@@ -793,10 +757,8 @@
       showSlide(index);
     }
     
-    // Inicializar carrossel
     showSlide(currentSlide);
     
-    // Adicionar eventos aos botões (redundância)
     document.addEventListener('DOMContentLoaded', () => {
       const prevBtn = document.querySelector('.prev-btn');
       const nextBtn = document.querySelector('.next-btn');
