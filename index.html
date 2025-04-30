@@ -390,8 +390,9 @@
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 4px;
+      gap: 10px;
       justify-content: center;
+      justify-items: center;
     }
     
     .project-card {
@@ -401,8 +402,8 @@
       box-shadow: var(--sombra);
       border: 1px solid rgba(0, 0, 0, 0.05);
       max-width: 340px;
-      min-height: 360px;
-      margin: 0 auto;
+      min-height: 320px;
+      margin: 0;
       transition: none;
     }
     
@@ -690,12 +691,13 @@
       
       .projects-grid {
         grid-template-columns: 1fr;
-        gap: 6px;
+        gap: 10px;
+        justify-items: center;
       }
       
       .project-card {
         max-width: 400px;
-        margin: 0 auto;
+        margin: 0;
       }
       
       .project-img-container {
@@ -923,7 +925,7 @@
         
         <div class="skills-grid">
           <div class="skill-card" data-aos="fade-up">
-            <i class="fab fa-figma skill-icon"></i>
+            <i class="fab fa-figmaammonium skill-icon"></i>
             <h3 class="skill-title">Figma</h3>
           </div>
           
