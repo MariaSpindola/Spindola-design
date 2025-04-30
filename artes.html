@@ -10,10 +10,10 @@
   <!-- Font Awesome para ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Google Fonts: Lora e Poppins -->
+  <!-- Google Fonts: Lora e Roboto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   
   <!-- AOS (Animate On Scroll) para animações -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
@@ -31,7 +31,7 @@
       --cinza-medio: #666;
       --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
       --sombra-grande: 0 10px 25px rgba(0, 0, 0, 0.1);
-      --transicao: all 0.5s ease;
+      --transicao: all 0.6s ease;
       --borda-arredondada: 12px;
     }
     
@@ -47,7 +47,7 @@
     }
     
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Roboto', sans-serif;
       color: var(--grafite);
       line-height: 1.7;
       background-color: var(--branco);
@@ -147,17 +147,16 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(15px);
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding: 15px 0;
-      box-shadow: 0 4px 20px rgba(79, 25, 176, 0.08);
       z-index: 1000;
-      border-bottom: 1px solid rgba(79, 25, 176, 0.1);
       transition: all 0.4s ease;
     }
     
     .navbar:hover {
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: rgba(255, 255, 255, 0.5);
     }
     
     .navbar-container {
@@ -187,20 +186,20 @@
     }
     
     .nav-link {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
       font-size: 14px;
       padding: 5px 10px;
       border-radius: 10px;
       transition: var(--transicao);
+      display: inline-block;
     }
     
-    .nav-link:hover {
-      color: var(--roxo-escuro);
-      font-weight: bold;
-    }
-    
+    .nav-link:hover,
     .nav-link.active {
-      font-weight: bold;
       color: var(--roxo-escuro);
+      font-weight: 700;
+      transform: scale(1.1);
     }
     
     /* Seções de projeto */
@@ -459,7 +458,7 @@
           <a href="index.html#ferramentas" class="nav-link">Ferramentas</a>
         </li>
         <li class="nav-item">
-          <a href="index.html.#soft-skills" class="nav-link">Soft Skills</a>
+          <a href="index.html#soft-skills" class="nav-link">Soft Skills</a>
         </li>
         <li class="nav-item">
           <a href="index.html#contato" class="nav-link">Contato</a>
@@ -511,7 +510,7 @@
             Realizei uma análise da identidade visual da Sankhya e do público-alvo, criei moodboards e protótipos no Figma, e ajustei os designs com base no feedback da equipe de marketing para garantir alinhamento com os objetivos da campanha.
           </p>
           
-          <div class="flex-image" data-aos="fade-up" data-aos-delay="100" style="max-width: 500px; margin: 30px auto;">
+          <div Cordialment class="flex-image" data-aos="fade-up" data-aos-delay="100" style="max-width: 500px; margin: 30px auto;">
             <img src="Case Sankhya.jpg" alt="Material de marketing para Sankhya Gestão de Negócios">
           </div>
         </div>
