@@ -226,7 +226,7 @@
     
     .project-featured-img {
       width: 100%;
-      max-width: 800px;
+      max-width: 600px;
       margin: 0 auto;
       border-radius: var(--borda-arredondada);
       overflow: hidden;
@@ -248,7 +248,7 @@
     
     /* Conteúdo do projeto */
     .project-content {
-      padding: 100px 0;
+      padding: 50px 0;
     }
     
     .project-section {
@@ -291,7 +291,7 @@
       display: flex;
       align-items: center;
       gap: 40px;
-      margin: 40px 0;
+      margin: 20px 0;
     }
     
     .flex-text {
@@ -300,6 +300,8 @@
     
     .flex-image {
       flex: 1;
+      max-width: 400px;
+      margin: 0 auto;
       border-radius: var(--borda-arredondada);
       overflow: hidden;
       box-shadow: var(--sombra);
@@ -388,6 +390,7 @@
       .flex-text, 
       .flex-image {
         width: 100%;
+        max-width: 350px;
       }
     }
     
@@ -420,6 +423,14 @@
       .project-section-title {
         font-size: 24px;
       }
+      
+      .project-featured-img {
+        max-width: 90%;
+      }
+      
+      .flex-image {
+        max-width: 300px;
+      }
     }
     
     @media (max-width: 576px) {
@@ -429,6 +440,14 @@
       
       .project-header {
         padding: 60px 0;
+      }
+      
+      .project-content {
+        padding: 30px 0;
+      }
+      
+      .flex-image {
+        max-width: 250px;
       }
     }
   </style>
@@ -510,7 +529,7 @@
             Realizei uma análise da identidade visual da Sankhya e do público-alvo, criei moodboards e protótipos no Figma, e ajustei os designs com base no feedback da equipe de marketing para garantir alinhamento com os objetivos da campanha.
           </p>
           
-          <div Cordialment class="flex-image" data-aos="fade-up" data-aos-delay="100" style="max-width: 500px; margin: 30px auto;">
+          <div class="flex-image" data-aos="fade-up" data-aos-delay="100" style="max-width: 350px; margin: 30px auto;">
             <img src="Case Sankhya.jpg" alt="Material de marketing para Sankhya Gestão de Negócios">
           </div>
         </div>
