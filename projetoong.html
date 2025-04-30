@@ -335,24 +335,23 @@
       padding: 10px;
       cursor: pointer;
       border-radius: 50%;
-      transition: var(--transicao);
       font-size: 14px;
       opacity: 0.8;
+      transition: background-color 0.3s ease, opacity 0.3s ease; /* Transição apenas para cor e opacidade */
     }
     
     .carousel-nav button:hover {
       background-color: var(--roxo-vivo);
       opacity: 1;
-      transform: scale(1.1);
     }
     
-    /* Ajustar posicionamento dos botões */
+    /* Posicionamento estático dos botões com margens */
     .carousel-nav .prev-btn {
-      transform: translateX(80px); /* Move o botão esquerdo para a direita */
+      margin-left: 50px; /* Move o botão esquerdo para a direita */
     }
     
     .carousel-nav .next-btn {
-      transform: translateX(-80px); /* Move o botão direito para a esquerda */
+      margin-right: 50px; /* Move o botão direito para a esquerda */
     }
     
     .carousel-dots {
@@ -417,7 +416,7 @@
       background-color: var(--roxo-escuro);
       color: var(--branco);
       border-radius: 50%;
-      display diversas: flex;
+      display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
@@ -509,11 +508,11 @@
       }
       
       .carousel-nav .prev-btn {
-        transform: translateX(10px); /* Reduz o deslocamento */
+        margin-left: 30px; /* Reduz a margem em telas menores */
       }
       
       .carousel-nav .next-btn {
-        transform: translateX(-10px); /* Reduz o deslocamento */
+        margin-right: 30px; /* Reduz a margem em telas menores */
       }
       
       .carousel-dot {
@@ -566,11 +565,11 @@
       }
       
       .carousel-nav .prev-btn {
-        transform: translateX(5px); /* Ainda menos deslocamento */
+        margin-left: 15px; /* Ainda menos margem em telas pequenas */
       }
       
       .carousel-nav .next-btn {
-        transform: translateX(-5px); /* Ainda menos deslocamento */
+        margin-right: 15px; /* Ainda menos margem em telas pequenas */
       }
       
       .carousel-dot {
