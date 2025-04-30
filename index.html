@@ -8,10 +8,10 @@
   <!-- Font Awesome para ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- Google Fonts: Lora e Poppins -->
+  <!-- Google Fonts: Lora e Roboto -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   
   <!-- AOS (Animate On Scroll) para animações -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
@@ -28,8 +28,7 @@
       --cinza-claro: #f5f5f5;
       --cinza-medio: #666;
       --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
-      --sombra-grande: 0 10px 25px rgba(0, 0, _SIMPLE_TEXT_0, 0.1);
-      --transicao: all 0.3s ease;
+      --transicao: all 0.6s ease;
       --borda-arredondada: 12px;
     }
     
@@ -45,7 +44,7 @@
     }
     
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Roboto', sans-serif;
       color: var(--grafite);
       line-height: 1.7;
       background-color: transparent;
@@ -110,19 +109,10 @@
     }
     
     /* Animações */
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
-    
     @keyframes shine {
       0% { left: -100%; opacity: 0; }
       50% { opacity: 1; }
       100% { left: 100%; opacity: 0; }
-    }
-    
-    .animate-float {
-      animation: float 4s ease-in-out infinite;
     }
     
     /* Estilo do background com gradiente */
@@ -172,16 +162,16 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(15px);
+      background-color: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding: 15px 0;
-      border-bottom: 1px solid rgba(79, 25, 176, 0.1);
       z-index: 1000;
       transition: all 0.4s ease;
     }
     
     .navbar:hover {
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: rgba(255, 255, 255, 0.5);
     }
     
     .navbar-container {
@@ -211,20 +201,20 @@
     }
     
     .nav-link {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
       font-size: 14px;
       padding: 5px 10px;
       border-radius: 10px;
       transition: var(--transicao);
+      display: inline-block;
     }
     
-    .nav-link:hover {
-      color: var(--roxo-escuro);
-      font-weight: bold;
-    }
-    
+    .nav-link:hover,
     .nav-link.active {
-      font-weight: bold;
       color: var(--roxo-escuro);
+      font-weight: 700;
+      transform: scale(1.1);
     }
     
     /* Seção Hero */
@@ -274,19 +264,19 @@
       border-radius: 50%;
       border: 4px solid var(--branco);
       overflow: hidden;
-      animation: float 4s ease-in-out infinite;
     }
     
     .hero-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: center 30%;
+      transform: scale(1.1);
       transition: transform 0.7s ease;
     }
     
     .hero-img:hover img {
-      transform: scale(1.05);
+      transform: scale(1.15);
     }
     
     .btn {
@@ -300,6 +290,7 @@
       transition: var(--transicao);
       border: none;
       cursor: pointer;
+      white-space: nowrap;
     }
     
     .btn:hover {
@@ -312,8 +303,8 @@
     }
     
     .btn-container .btn {
-      display: block;
-      width: 100%;
+      display: inline-block;
+      width: auto;
     }
     
     /* Seções */
@@ -338,29 +329,38 @@
     
     /* Timeline */
     .timeline-item {
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(5px);
+      border-radius: var(--borda-arredondada);
+      box-shadow: var(--sombra);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 20px;
       margin-bottom: 40px;
       text-align: left;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+      transition: none;
+      position: relative;
     }
     
     .timeline-title {
       font-size: 20px;
       margin-bottom: 10px;
       position: relative;
+      padding-left: 24px;
     }
     
     .timeline-title::before {
       content: '';
       position: absolute;
-      left: -32px;
+      left: 10px;
       top: 50%;
       transform: translateY(-50%);
-      width: 12px;
-      height: 12px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background-color: #80b3ff;
+      background-color: var(--roxo-escuro);
     }
     
     .timeline-subtitle {
@@ -390,7 +390,7 @@
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      gap: 4px;
       justify-content: center;
     }
     
@@ -398,18 +398,12 @@
       background-color: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(5px);
       border-radius: var(--borda-arredondada);
-      overflow: hidden;
       box-shadow: var(--sombra);
       border: 1px solid rgba(0, 0, 0, 0.05);
       max-width: 340px;
       min-height: 360px;
       margin: 0 auto;
-      transition: var(--transicao);
-    }
-    
-    .project-card:hover {
-      box-shadow: var(--sombra-grande);
-      transform: translateY(-10px);
+      transition: none;
     }
     
     .project-img-container {
@@ -504,7 +498,14 @@
     }
     
     .skill-card {
+      background-color: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(5px);
+      border-radius: var(--borda-arredondada);
+      box-shadow: var(--sombra);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 20px;
       text-align: center;
+      transition: none;
     }
     
     .skill-icon {
@@ -533,12 +534,7 @@
       max-width: 600px;
       margin: 0 auto;
       border: 1px solid rgba(0, 0, 0, 0.05);
-      transition: var(--transicao);
-    }
-    
-    .contact-form-container:hover {
-      box-shadow: var(--sombra-grande);
-      transform: translateY(-10px);
+      transition: none;
     }
     
     .form-group {
@@ -560,7 +556,7 @@
       padding: 12px 15px;
       border: 1px solid #ddd;
       border-radius: 8px;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-size: 15px;
       transition: var(--transicao);
     }
@@ -694,6 +690,7 @@
       
       .projects-grid {
         grid-template-columns: 1fr;
+        gap: 6px;
       }
       
       .project-card {
@@ -711,6 +708,11 @@
       
       .btn-container {
         max-width: 400px;
+      }
+      
+      .btn-container .btn {
+        padding: 10px 20px;
+        font-size: 13px;
       }
     }
     
@@ -742,6 +744,24 @@
       
       .contact-form-container {
         padding: 20px;
+      }
+      
+      .timeline-item {
+        padding: 15px;
+      }
+      
+      .skill-card {
+        padding: 15px;
+      }
+      
+      .timeline-title::before {
+        left: 8px;
+        width: 6px;
+        height: 6px;
+      }
+      
+      .timeline-title {
+        padding-left: 20px;
       }
     }
   </style>
@@ -792,7 +812,7 @@
             Combinando criatividade, estratégia e tecnologia para desenvolver soluções impactantes e memoráveis.
           </p>
           <div class="btn-container">
-            <a href="#contato" class="btn" style="width: 150px;">Entre em contato</a>
+            <a href="#contato" class="btn">Entre em contato</a>
           </div>
         </div>
         
