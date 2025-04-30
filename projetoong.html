@@ -299,8 +299,8 @@
     }
     
     .carousel-item.next {
-      opacity: 0.5;
-      transform: translateX(100%) scale(0.8) perspective(500px) rotateY(-10deg);
+      opacity: 0.5; /* Transparência para prévia ao fundo */
+      transform: translateX(30%) scale(0.8) perspective(500px) rotateY(-10deg); /* Ajustado para aproximar */
       z-index: 1;
     }
     
@@ -332,7 +332,7 @@
       background-color: var(--grafite);
       color: var(--branco);
       border: none;
-      width: 40px; /* Dimensões fixas para formato circular */
+      width: 40px;
       height: 40px;
       cursor: pointer;
       border-radius: 50%;
@@ -341,7 +341,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: background-color 0.3s ease, opacity 0.3s ease; /* Transição apenas para cor e opacidade */
+      transition: background-color 0.3s ease, opacity 0.3s ease;
     }
     
     .carousel-nav button:hover {
@@ -349,13 +349,12 @@
       opacity: 1;
     }
     
-    /* Posicionamento estático dos botões com margens */
     .carousel-nav .prev-btn {
-      margin-left: 50px; /* Move o botão esquerdo para a direita */
+      margin-left: 50px;
     }
     
     .carousel-nav .next-btn {
-      margin-right: 100px; /* Aumenta a margem para aproximar do centro */
+      margin-right: 100px;
     }
     
     .carousel-dots {
@@ -452,7 +451,7 @@
         width: 55%;
       }
       .carousel-item.next {
-        transform: translateX(90%) scale(0.8) perspective(500px) rotateY(-10deg);
+        transform: translateX(30%) scale(0.8) perspective(500px) rotateY(-10deg); /* Ajustado para aproximar */
       }
       .carousel-item.prev {
         transform: translateX(-90%) scale(0.8) perspective(500px) rotateY(10deg);
@@ -497,9 +496,8 @@
       .carousel-item {
         width: 60%;
       }
-      
       .carousel-item.next {
-        transform: translateX(80%) scale(0.8) perspective(500px) rotateY(-10deg);
+        transform: translateX(25%) scale(0.8) perspective(500px) rotateY(-10deg); /* Ajustado para telas menores */
       }
       
       .carousel-item.prev {
@@ -507,17 +505,17 @@
       }
       
       .carousel-nav button {
-        width: 36px; /* Menor em telas menores */
+        width: 36px;
         height: 36px;
         font-size: 13px;
       }
       
       .carousel-nav .prev-btn {
-        margin-left: 30px; /* Reduz a margem */
+        margin-left: 30px;
       }
       
       .carousel-nav .next-btn {
-        margin-right: 60px; /* Aumenta a margem para aproximar */
+        margin-right: 60px;
       }
       
       .carousel-dot {
@@ -549,7 +547,7 @@
       }
       
       .carousel-item.next {
-        transform: translateX(70%) scale(0.8) perspective(500px) rotateY(-10deg);
+        transform: translateX(20%) scale(0.8) perspective(500px) rotateY(-10deg); /* Ajustado para telas pequenas */
       }
       
       .carousel-item.prev {
@@ -565,17 +563,17 @@
       }
       
       .carousel-nav button {
-        width: 32px; /* Ainda menor em telas pequenas */
+        width: 32px;
         height: 32px;
         font-size: 12px;
       }
       
       .carousel-nav .prev-btn {
-        margin-left: 15px; /* Reduz a margem */
+        margin-left: 15px;
       }
       
       .carousel-nav .next-btn {
-        margin-right: 30px; /* Aumenta a margem para aproximar */
+        margin-right: 30px;
       }
       
       .carousel-dot {
