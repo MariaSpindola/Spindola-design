@@ -1,3 +1,7 @@
+**Alteração Resumida**:  
+Ajustar a imagem 3.png quando é a próxima imagem (.carousel-item.next) para ficar menos afastada, reduzindo translateX para 10% (e proporcional nos media queries: 10%, 5%, 5%) apenas para o item com src="3.png" usando um seletor específico. Não alterar outras imagens ou partes do código.
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -285,7 +289,7 @@
     
     .carousel-item.next {
       opacity: 0.5;
-      transform: translateX(20%) scale(0.8) perspective(500px) rotateY(-10deg);
+      transform: translateX(30%) scale(0.8) perspective(500px) rotateY(-10deg);
       z-index: 1;
     }
     
@@ -438,7 +442,7 @@
         width: 55%;
       }
       .carousel-item.next {
-        transform: translateX(20%) scale(0.8) perspective(500px) rotateY(-10deg);
+        transform: translateX(30%) scale(0.8) perspective(500px) rotateY(-10deg);
       }
       .carousel-item.next img[src="3.png"] {
         transform: translateX(10%) scale(0.8) perspective(500px) rotateY(-10deg);
@@ -487,10 +491,11 @@
         width: 60%;
       }
       .carousel-item.next {
-        transform: translateX(15%) scale(0.8) perspective(500px) rotateY(-10deg);
+        transform: translateX(25%) scale(0.8) perspective(500px) rotateY(-10deg);
       }
+      
       .carousel-item.next img[src="3.png"] {
-        transform: translateX(7.5%) scale(0.8) perspective(500px) rotateY(-10deg);
+        transform: translateX(5%) scale(0.8) perspective(500px) rotateY(-10deg);
       }
       
       .carousel-item.prev {
@@ -540,7 +545,7 @@
       }
       
       .carousel-item.next {
-        transform: translateX(10%) scale(0.8) perspective(500px) rotateY(-10deg);
+        transform: translateX(20%) scale(0.8) perspective(500px) rotateY(-10deg);
       }
       
       .carousel-item.next img[src="3.png"] {
@@ -788,3 +793,4 @@
   </script>
 </body>
 </html>
+```
