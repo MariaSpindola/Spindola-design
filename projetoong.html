@@ -25,7 +25,7 @@
       --cinza-medio: #666;
       --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
       --sombra-grande: 0 10px 25px rgba(0, 0, 0, 0.1);
-      --transicao: all 0.6s ease;
+      --transicao: all 0.5s ease;
       --borda-arredondada: 12px;
     }
     
@@ -253,10 +253,10 @@
     
     .carousel-container {
       position: relative;
-      max-width: 1000px;
-      height: 400px;
+      max-width: 600px;
+      height: 450px;
       margin: 20px auto 80px;
-      overflow: hidden;
+      overflow: visible;
     }
     
     .carousel {
@@ -269,12 +269,12 @@
       position: absolute;
       top: 0;
       left: 50%;
-      width: 70%;
+      width: 40%;
       height: 100%;
       opacity: 0;
       transform: translateX(-50%) scale(0.8);
       z-index: 0;
-      transition: all 0.5s ease;
+      transition: var(--transicao);
     }
     
     .carousel-item.active {
@@ -284,18 +284,18 @@
     }
     
     .carousel-item.next {
-      opacity: 0.7;
-      transform: translateX(15%) scale(0.8) perspective(500px) rotateY(-5deg);
+      opacity: 0.8;
+      transform: translateX(30%) scale(0.8) perspective(200px) rotateY(-3deg);
       z-index: 1;
     }
     
     .carousel-item.next img[src="3.png"] {
-      transform: translateX(-5%) scale(0.8) perspective(500px) rotateY(-5deg);
+      transform: translateX(25%) scale(0.8) perspective(200px) rotateY(-3deg);
     }
     
     .carousel-item.prev {
-      opacity: 0.7;
-      transform: translateX(-100%) scale(0.8) perspective(500px) rotateY(5deg);
+      opacity: 0.8;
+      transform: translateX(-130%) scale(0.8) perspective(200px) rotateY(3deg);
       z-index: 1;
     }
     
@@ -314,7 +314,7 @@
       display: flex;
       justify-content: space-between;
       transform: translateY(-50%);
-      padding: 0 15px;
+      padding: 0 10px;
       z-index: 10;
     }
     
@@ -340,11 +340,11 @@
     }
     
     .carousel-nav .prev-btn {
-      margin-left: 20px;
+      margin-left: 15px;
     }
     
     .carousel-nav .next-btn {
-      margin-right: 70px;
+      margin-right: 15px;
     }
     
     .carousel-dots {
@@ -431,20 +431,20 @@
     
     @media (max-width: 991px) {
       .carousel-container {
-        max-width: 800px;
-        height: 360px;
+        max-width: 550px;
+        height: 400px;
       }
       .carousel-item {
-        width: 70%;
+        width: 40%;
       }
       .carousel-item.next {
-        transform: translateX(15%) scale(0.8) perspective(500px) rotateY(-5deg);
+        transform: translateX(30%) scale(0.8) perspective(200px) rotateY(-3deg);
       }
       .carousel-item.next img[src="3.png"] {
-        transform: translateX(-5%) scale(0.8) perspective(500px) rotateY(-5deg);
+        transform: translateX(25%) scale(0.8) perspective(200px) rotateY(-3deg);
       }
       .carousel-item.prev {
-        transform: translateX(-90%) scale(0.8) perspective(500px) rotateY(5deg);
+        transform: translateX(-130%) scale(0.8) perspective(200px) rotateY(3deg);
       }
     }
     
@@ -479,23 +479,23 @@
       }
       
       .carousel-container {
-        max-width: 600px;
-        height: 320px;
+        max-width: 450px;
+        height: 350px;
       }
       
       .carousel-item {
-        width: 70%;
+        width: 40%;
       }
       .carousel-item.next {
-        transform: translateX(10%) scale(0.8) perspective(500px) rotateY(-5deg);
+        transform: translateX(30%) scale(0.8) perspective(200px) rotateY(-3deg);
       }
       
       .carousel-item.next img[src="3.png"] {
-        transform: translateX(-5%) scale(0.8) perspective(500px) rotateY(-5deg);
+        transform: translateX(25%) scale(0.8) perspective(200px) rotateY(-3deg);
       }
       
       .carousel-item.prev {
-        transform: translateX(-80%) scale(0.8) perspective(500px) rotateY(5deg);
+        transform: translateX(-130%) scale(0.8) perspective(200px) rotateY(3deg);
       }
       
       .carousel-nav button {
@@ -505,11 +505,11 @@
       }
       
       .carousel-nav .prev-btn {
-        margin-left: 15px;
+        margin-left: 10px;
       }
       
       .carousel-nav .next-btn {
-        margin-right: 50px;
+        margin-right: 10px;
       }
       
       .carousel-dot {
@@ -532,24 +532,24 @@
       }
       
       .carousel-container {
-        max-width: 500px;
-        height: 280px;
+        max-width: 350px;
+        height: 300px;
       }
       
       .carousel-item {
-        width: 70%;
+        width: 40%;
       }
       
       .carousel-item.next {
-        transform: translateX(5%) scale(0.8) perspective(500px) rotateY(-5deg);
+        transform: translateX(30%) scale(0.8) perspective(200px) rotateY(-3deg);
       }
       
       .carousel-item.next img[src="3.png"] {
-        transform: translateX(-5%) scale(0.8) perspective(500px) rotateY(-5deg);
+        transform: translateX(25%) scale(0.8) perspective(200px) rotateY(-3deg);
       }
       
       .carousel-item.prev {
-        transform: translateX(-70%) scale(0.8) perspective(500px) rotateY(5deg);
+        transform: translateX(-130%) scale(0.8) perspective(200px) rotateY(3deg);
       }
       
       .project-title {
@@ -567,11 +567,11 @@
       }
       
       .carousel-nav .prev-btn {
-        margin-left: 10px;
+        margin-left: 5px;
       }
       
       .carousel-nav .next-btn {
-        margin-right: 30px;
+        margin-right: 5px;
       }
       
       .carousel-dot {
@@ -725,8 +725,12 @@
     const slides = carousel.getElementsByClassName('carousel-item');
     const dots = document.getElementsByClassName('carousel-dot');
     let currentSlide = 0;
+    let isTransitioning = false;
     
     function showSlide(index) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      
       index = (index + slides.length) % slides.length;
       currentSlide = index;
       
@@ -734,6 +738,7 @@
         slides[i].classList.remove('active', 'next', 'prev');
         slides[i].style.opacity = '0';
         slides[i].style.zIndex = '0';
+        slides[i].style.transition = 'all 0.5s ease';
       }
       
       slides[currentSlide].classList.add('active');
@@ -743,10 +748,10 @@
       const nextIndex = (currentSlide + 1) % slides.length;
       const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
       slides[nextIndex].classList.add('next');
-      slides[nextIndex].style.opacity = '0.7';
+      slides[nextIndex].style.opacity = '0.8';
       slides[nextIndex].style.zIndex = '1';
       slides[prevIndex].classList.add('prev');
-      slides[prevIndex].style.opacity = '0.7';
+      slides[prevIndex].style.opacity = '0.8';
       slides[prevIndex].style.zIndex = '1';
       
       for (let i = 0; i < dots.length; i++) {
@@ -754,22 +759,27 @@
       }
       dots[currentSlide].classList.add('active');
       
-      console.log('Slide atual:', currentSlide, 'Anterior:', prevIndex, 'Próximo:', nextIndex);
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 500);
     }
     
     function nextSlide() {
-      console.log('Clicou em Próximo');
-      showSlide(currentSlide + 1);
+      if (!isTransitioning) {
+        showSlide(currentSlide + 1);
+      }
     }
     
     function prevSlide() {
-      console.log('Clicou em Anterior');
-      showSlide(currentSlide - 1);
+      if (!isTransitioning) {
+        showSlide(currentSlide - 1);
+      }
     }
     
     function goToSlide(index) {
-      console.log('Clicou no dot:', index);
-      showSlide(index);
+      if (!isTransitioning) {
+        showSlide(index);
+      }
     }
     
     showSlide(currentSlide);
@@ -777,14 +787,8 @@
     document.addEventListener('DOMContentLoaded', () => {
       const prevBtn = document.querySelector('.prev-btn');
       const nextBtn = document.querySelector('.next-btn');
-      prevBtn.addEventListener('click', () => {
-        console.log('Evento click em Anterior');
-        nextSlide();
-      });
-      nextBtn.addEventListener('click', () => {
-        console.log('Evento click em Próximo');
-        prevSlide();
-      });
+      prevBtn.addEventListener('click', nextSlide);
+      nextBtn.addEventListener('click', prevSlide);
     });
   </script>
 </body>
