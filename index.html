@@ -902,14 +902,10 @@ Combinando criatividade, estratégia e tecnologia para desenvolver soluções im
       <div class="carousel-track">
         <!-- Projeto 1 -->
         <div class="carousel-item">
+          <h3 class="project-title">UX/UI Design</h3>
           <a href="projetoong.html">
             <div class="card-3d">
               <img src="1.png" alt="App para adoção" />
-              <div class="card-overlay">
-                <div class="card-text">
-                  <h3 class="project-title">UX/UI Design</h3>
-                </div>
-              </div>
             </div>
           </a>
           <div class="project-description">
@@ -921,14 +917,10 @@ Combinando criatividade, estratégia e tecnologia para desenvolver soluções im
 
         <!-- Projeto 2 -->
         <div class="carousel-item">
+          <h3 class="project-title">Design Gráfico</h3>
           <a href="artes.html">
             <div class="card-3d">
               <img src="Chipus (feed).png" alt="Materiais visuais Sankhya" />
-              <div class="card-overlay">
-                <div class="card-text">
-                  <h3 class="project-title">Design Gráfico</h3>
-                </div>
-              </div>
             </div>
           </a>
           <div class="project-description">
@@ -937,6 +929,20 @@ Combinando criatividade, estratégia e tecnologia para desenvolver soluções im
             <p class="project-desc">Destacando soluções de ERP da Sankhya Gestão de Negócios.</p>
           </div>
         </div>
+
+        <!-- Projeto 3 - Em breve -->
+        <div class="carousel-item">
+          <h3 class="project-title">Em breve</h3>
+          <div class="card-3d">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Projeto em breve" />
+          </div>
+          <div class="project-description">
+            <h4 class="project-subtitle">Novo projeto em desenvolvimento</h4>
+            <p class="project-desc">Um projeto autoral com foco em experiência do usuário.</p>
+            <p class="project-desc">Em breve mais detalhes estarão disponíveis aqui.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -966,6 +972,7 @@ Combinando criatividade, estratégia e tecnologia para desenvolver soluções im
   perspective: 1000px;
   text-align: left;
   max-width: 300px;
+  font-family: 'Inter', sans-serif;
 }
 
 .card-3d {
@@ -981,7 +988,7 @@ Combinando criatividade, estratégia e tecnologia para desenvolver soluções im
 }
 
 .card-3d:hover {
-  transform: rotateY(15deg) rotateX(8deg) scale(1.05);
+  transform: rotateY(6deg) rotateX(3deg) scale(1.03);
 }
 
 .card-3d img {
@@ -992,31 +999,12 @@ Combinando criatividade, estratégia e tecnologia para desenvolver soluções im
   display: block;
 }
 
-.card-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.65);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  padding: 1rem;
-  box-sizing: border-box;
-  border-radius: 0 0 16px 16px;
-}
-
-.card-3d:hover .card-overlay {
-  opacity: 1;
-}
-
-.card-text {
-  color: #fff;
-  text-align: left;
-}
-
 .project-title {
   font-size: 1.25rem;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+  font-weight: 600;
+  color: #111;
 }
 
 .project-description {
@@ -1025,16 +1013,17 @@ Combinando criatividade, estratégia e tecnologia para desenvolver soluções im
 }
 
 .project-subtitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin: 0 0 0.25rem;
+  color: #222;
 }
 
 .project-desc {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: #444;
-  line-height: 1.4;
-  margin: 0.25rem 0;
+  line-height: 1.45;
+  margin: 0.2rem 0;
 }
 
 /* Estilo de responsividade */
@@ -1050,7 +1039,6 @@ Combinando criatividade, estratégia e tecnologia para desenvolver soluções im
   }
 }
 </style>
-
 
 
 <!-- Seção Soft Skills -->
