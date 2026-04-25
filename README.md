@@ -1,41 +1,40 @@
 # FinAI 💸
 
-Aplicativo web de finanças pessoais com assistente financeiro com I.A. local (baseado em regras), feito em HTML/CSS/JS puro.
+App de finanças com assistente financeiro IA (local) em **HTML/CSS/JS**.
 
-## Funcionalidades
+## Ver em 10 segundos (jeito mais fácil)
 
-- Dashboard com **receitas**, **despesas** e **saldo**.
-- Cadastro e remoção de transações.
-- Persistência de dados com `localStorage`.
-- Meta de economia com barra de progresso.
-- Assistente financeiro para tirar dúvidas sobre gastos, saldo e metas.
+### Opção A — sem terminal
+1. Abra a pasta do projeto.
+2. Dê duplo clique em `index.html`.
+3. Pronto ✅
 
-## Rodando localmente
-
+### Opção B — com 1 comando
 ```bash
-python -m http.server 8000
+./run-local.sh
 ```
+Abra: `http://localhost:8000`
 
-Depois abra:
+---
 
-- `http://localhost:8000/index.html`
+## Publicar no GitHub Pages (fácil)
 
-## Deploy no GitHub Pages (automático)
+1. Envie o código para o GitHub.
+2. Vá em **Settings → Pages**.
+3. Em **Source**, selecione **GitHub Actions**.
+4. Faça push na `main`.
+5. Aguarde o workflow **Deploy static content to Pages** ficar verde.
 
-Este repositório inclui workflow para publicar no GitHub Pages via GitHub Actions.
+Seu link final será:
 
-### Passo a passo
+`https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`
 
-1. Suba o projeto para um repositório no GitHub.
-2. No GitHub, abra **Settings → Pages**.
-3. Em **Build and deployment**, selecione **Source: GitHub Actions**.
-4. Faça push para a branch `main`.
-5. Aguarde o workflow **Deploy static content to Pages** concluir com sucesso.
+---
 
-URL final esperada:
+## O que o app faz
 
-- `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`
-
-Exemplo:
-
-- `https://mariaexemplo.github.io/Spindola-design/`
+- Registra receitas e despesas.
+- Calcula saldo automaticamente.
+- Salva tudo no navegador (`localStorage`).
+- Cria meta de economia com barra de progresso.
+- Assistente financeiro com respostas inteligentes baseadas nos dados.
